@@ -1,0 +1,34 @@
+.menu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: inline-flex;
+    &__item {
+        line-height: 97px;
+    }
+    &__link {
+        font-size: 13px;
+        font-family: "Roboto";
+        color: #ffffff;
+        text-transform: uppercase;
+        text-decoration: none;
+        display: inline-flex;
+        padding: 0 18px 0 12px;
+        transition: color .3s, border .1s;
+        &:hover,
+        &:focus,
+        &--active {
+            color: #eab96a;
+            border-bottom: 3px solid #eab96a;
+        }
+    }
+    &__separator {
+        width: 4.5px;
+        height: 4.5px;
+        background: #ffffff;
+        border-radius: 100%;
+        display: inline-flex;
+        vertical-align: middle;
+        margin: 0 26.5px;
+    }
+}
