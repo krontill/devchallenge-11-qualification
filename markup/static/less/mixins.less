@@ -31,13 +31,13 @@
 
 // You can add your own mixins here:
 
-.retina-img(@img-url) {
+.retina-img(@img-url, @repeat: no-repeat, @img-position: 0 0, @size: cover) {
     @media screen and (-webkit-min-device-pixel-ratio: 2),
     only screen and ( min-resolution: 192dpi),
     only screen and ( min-resolution: 2dppx),
     only screen and (min-device-pixel-ratio: 2) {
-        background: url(@img-url) no-repeat 0 0;
-        background-size: cover;
+        background: url(@img-url) @repeat @img-position;
+        background-size: @size;
     }
 }
 
