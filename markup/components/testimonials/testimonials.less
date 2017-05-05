@@ -1,0 +1,102 @@
+.testimonials {
+    padding: 63px 0 68px;
+    &__wrap {
+        max-width: 1180px;
+        margin: 0 auto;
+    }
+    &__title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 50px;
+        font-family: "robotoblack", sans-serif;
+        color: black;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        margin: 30px 0;
+    }
+    &__slogan {
+        display: flex;
+        justify-content: center;
+        font-size: 16px;
+        font-family: Georgia, Times, "Times New Roman", serif;
+        color: #485260;
+        letter-spacing: -0.16px;
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+    }
+    &__photo {
+        width: 171px;
+        height: 171px;
+        margin: 0 auto 14px;
+        position: relative;
+    }
+    &__img {
+        border-radius: 100%;
+    }
+    &__social {
+        border-radius: 100%;
+        background-color: #4267b2;
+        box-shadow: 0 9px 29px 0 rgba(61, 61, 62, 0.39);
+        position: absolute;
+        top: 23px;
+        right: -7px;
+        width: 38px;
+        height: 38px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background .3s;
+        &:hover,
+        &:focus {
+            background-color: darken(#4267b2, 10%);
+        }
+        &:before {
+            content: '';
+            display: flex;
+            .bg(@fa-facebook);
+        }
+    }
+    &__name {
+        font-size: 17.5px;
+        line-height: 25px;
+        font-family: "robotoblack", sans-serif;
+        color: black;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 1.75px;
+        margin: 17px 0;
+    }
+    &__text {
+        font-size: 16px;
+        line-height: 35px;
+        font-family: Georgia, Times, "Times New Roman", serif;
+        color: #485260;
+        text-align: center;
+        white-space: normal;
+        letter-spacing: -0.16px;
+    }
+    &__dots {
+        margin: 55px 0 0;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+        li {
+            display: inline-flex;
+            cursor: pointer;
+            border-radius: 100%;
+            background: black;
+            width: 16px;
+            height: 16px;
+            transition: background .3s;
+            margin: 0 9.5px;
+            &:hover,
+            &:focus,
+            &.active {
+                background: #eab96a;
+            }
+        }
+    }
+}
