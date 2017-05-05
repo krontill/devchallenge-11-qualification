@@ -1,0 +1,82 @@
+.info {
+    display: flex;
+    padding: 87px 0 0 0;
+    position: relative;
+    &__bg-text {
+        position: absolute;
+        font-size: 200px;
+        font-family: "robotoblack", sans-serif;
+        color: #dddddd;
+        text-transform: uppercase;
+        z-index: -1;
+        top: 0;
+        right: 70px;
+        line-height: 180px;
+    }
+    &__img {
+        width: 641px; //600 origin
+        height: 362px; //338
+        background: url('%=static=%assets/info/info.png') no-repeat;
+        background-size: contain;
+    }
+    &__desc {
+        font-family: Georgia, Times, "Times New Roman", serif;
+        color: black;
+        padding: 0 0 0 57px;
+    }
+    &__title {
+        font-size: 30px;
+        color: #2b2b2b;
+        font-weight: bold;
+        margin: 13px 0 55px 0;
+    }
+    &__certificate,
+    &__time {
+        font-size: 16px;
+        line-height: 32px;
+        display: flex;
+        padding: 10px 2px;
+        letter-spacing: -0.1px;
+        &:before {
+            content: '';
+            display: inline-flex;
+            margin: 0 17px 0 0;
+        }
+    }
+    &__certificate {
+        &:before {
+            .bg(@certificate);
+        }
+    }
+    &__time {
+        &:before {
+            .bg(@clock);
+        }
+    }
+    &__cost {
+        font-size: 58px;
+        font-weight: bold;
+        margin: 6px 0 22px 2px;
+    }
+    &__currency {
+        font-size: 31px;
+        font-weight: bold;
+    }
+    &__reg {
+        border: none;
+        border-radius: 4px;
+        background: black;
+        width: 245px;
+        height: 58px;
+        font-size: 14px;
+        line-height: 28px;
+        font-family: "robotoblack", sans-serif;
+        color: white;
+        text-transform: uppercase;
+        padding: 0;
+        margin: 2px;
+        letter-spacing: 1.12px;
+    }
+}
+
+
