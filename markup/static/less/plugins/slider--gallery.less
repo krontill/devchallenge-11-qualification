@@ -1,0 +1,93 @@
+.slider--gallery {
+    margin: 73px 0 35px;
+    .slider__frame {
+        width: 750px;
+        margin: 0 auto;
+    }
+    .slider__slides {
+
+    }
+    .slider__slide {
+        margin: 0 27px;
+        width: 750px;
+        height: 500px;
+    }
+    .slider__nav {
+        display: flex;
+        justify-content: center;
+        margin: 67px 0 0;
+    }
+    .slider__prev,
+    .slider__next {
+        border: 2px solid #eab96a;
+        width: 68px;
+        height: 68px;
+        cursor: pointer;
+        transition: border .3s;
+        &:hover,
+        &:focus {
+            border-color: white;
+        }
+    }
+    .slider__prev-arrow,
+    .slider__next-arrow {
+        width: 109px;
+        height: 2px;
+        background: white;
+        display: flex;
+        margin: 32px 0 0 27px;
+        position: relative;
+        &:before,
+        &:after {
+            content: '';
+            display: inline-flex;
+            width: 19px;
+            height: 2px;
+            background: white;
+            position: absolute;
+            top: -6px;
+            left: -3px;
+        }
+        &:before {
+            transform: rotate(135deg);
+        }
+        &:after {
+            transform: rotate(-135deg);
+            top: 6px;
+        }
+    }
+    .slider__next-arrow {
+        margin-left: -70px;
+        &:before,
+        &:after {
+            right: -3px;
+            left: auto;
+        }
+        &:before {
+            transform: rotate(45deg);
+        }
+        &:after {
+            transform: rotate(-45deg);
+        }
+    }
+    .slider__counter {
+        font-family: Georgia, Times, "Times New Roman", serif;
+        letter-spacing: -0.1px;
+        margin: 12px 107px 12px 90px;
+    }
+    .slider__number {
+        font-size: 30px;
+        color: white;
+        min-width: 32px;
+        display: inline-flex;
+        justify-content: flex-start;
+        &:first-child {
+            justify-content: flex-end;
+        }
+    }
+    .slider__from {
+        font-size: 19.5px;
+        color: #eab96a;
+        margin: 0 3px;
+    }
+}

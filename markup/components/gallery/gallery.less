@@ -1,0 +1,57 @@
+.gallery {
+    background-color: #222121;
+    background: url('%=static=%assets/gallery/gallery-bg.jpg') no-repeat fixed;
+    .retina-img('%=static=%assets/gallery/gallery-bg-2x.jpg', @attachment: fixed);
+    position: relative;
+    padding: 112px 0;
+    &:before,
+    &:after {
+        content: '';
+        display: flex;
+        height: 141px;
+        width: 100%;
+        bottom: -26px;
+        position: absolute;
+        background: url('%=static=%assets/banner/mask.png') no-repeat;
+        .retina-img('%=static=%assets/banner/mask-2x.png');
+    }
+    &:before {
+        transform: rotate(180deg);
+        bottom: auto;
+        top: -1px;
+    }
+    &__title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 50px;
+        font-family: "robotoblack", sans-serif;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        margin: 30px 0 16px;
+        &:before,
+        &:after {
+            content: '';
+            display: flex;
+        }
+        &:before {
+            margin: 0 38px 0 0;
+            .bg(@3lines-left);
+        }
+        &:after {
+            margin: 0 0 0 30px;
+            .bg(@3lines-right);
+        }
+    }
+    &__desc {
+        font-size: 16px;
+        line-height: 25px;
+        font-family: Georgia, Times, "Times New Roman", serif;
+        color: white;
+        width: 400px;
+        margin: 0 auto;
+        letter-spacing: -0.1px;
+        text-align: center;
+    }
+}
