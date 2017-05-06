@@ -43,7 +43,7 @@ module.exports = {
         "sounds": {},
         "taskFinishedText": "Task finished at: "
     },
-    "minifyHtml": false,
+    "minifyHtml": true,
     "generateStaticPath": true,
     "buildPath": "./dist/",
     "useBuildVersioning": true,
