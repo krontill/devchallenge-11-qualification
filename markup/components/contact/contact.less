@@ -1,0 +1,131 @@
+.contact {
+    color: black;
+    padding: 90px 0 141px;
+    &__wrap {
+        max-width: 1180px;
+        margin: 0 auto;
+    }
+    &__title {
+        font-size: 50px;
+        font-family: "robotoblack", sans-serif;
+        color: black;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        margin: 30px 0 24px auto;
+        border-bottom: 1px solid black;
+        max-width: 762px;
+        line-height: 82px;
+    }
+    &__subtitle {
+        font-size: 16px;
+        font-family: Georgia, Times, "Times New Roman", serif;
+        margin: 0 0 0 auto;
+        max-width: 762px;
+    }
+    &__form {
+        max-width: 762px;
+        margin: 56px 0 0 auto;
+        display: flex;
+    }
+    &__input {
+        background: none;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid black;
+        width: 100%;
+        font-size: 12.5px;
+        font-family: "robotoblack", sans-serif;
+        color: black;
+        text-transform: uppercase;
+        line-height: 32px;
+        letter-spacing: 0.5px;
+        margin: 48px 0 0 0;
+
+        &::-webkit-input-placeholder {
+            color: black;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+        &::-moz-placeholder {
+            color: black;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+        /* Firefox 19+ */
+        &:-moz-placeholder {
+            color: black;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+        /* Firefox 18- */
+        &:-ms-input-placeholder {
+            color: black;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+
+        &:focus::-webkit-input-placeholder {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        &:focus::-moz-placeholder {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        &:focus:-moz-placeholder {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        &:focus:-ms-input-placeholder {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+    }
+    &__submit {
+        font-size: 17.5px;
+        font-family: "robotoblack", sans-serif;
+        background: none;
+        border: 2px solid black;
+        text-transform: uppercase;
+        letter-spacing: 0.6px;
+        padding: 16px 87px 18px;
+        margin: 0 67px 2px auto;
+        align-self: flex-end;
+        transition: border .3s;
+        &:hover,
+        &:focus {
+            border: 2px solid #eab96a;
+        }
+    }
+    &__arrow {
+        width: 110px;
+        height: 2px;
+        background: black;
+        display: flex;
+        margin: -12px 0 0 95px;
+        position: absolute;
+        &:before,
+        &:after {
+            content: '';
+            display: inline-flex;
+            width: 19px;
+            height: 2px;
+            background: black;
+            position: absolute;
+            right: -3px;
+            top: -6px;
+        }
+        &:before {
+            transform: rotate(45deg);
+        }
+        &:after {
+            transform: rotate(-45deg);
+            top: 6px;
+        }
+    }
+    &__group {
+        width: 383px;
+    }
+}
+
