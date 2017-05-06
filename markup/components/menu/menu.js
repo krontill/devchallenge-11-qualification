@@ -1,7 +1,7 @@
 (function () {
     //http://shpargalkablog.ru/2014/10/smooth-scrolling.html
     var linkNav = document.querySelectorAll('[data-scroll="menu"]'),
-        V = 1;  // скорость, может иметь дробное значение через точку
+        V = 0.3;  // скорость, может иметь дробное значение через точку
     for (var i = 0; i < linkNav.length; i++) {
         linkNav[i].addEventListener('click', function (e) {
             e.preventDefault();
