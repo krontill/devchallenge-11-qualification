@@ -16,7 +16,7 @@
             if (e.type === 'after.lory.init') {
                 for (let i = 0, len = dot_count; i < len; i++) {
                     dot_container.childNodes[i].addEventListener('click', function(e) {
-                        dot_navigation_slider.slideTo(Array.prototype.indexOf.call(dot_container.childNodes, e.target));
+                        testimonialsSlider.slideTo(Array.prototype.indexOf.call(dot_container.childNodes, e.target));
                     });
                 }
             }
@@ -39,10 +39,15 @@
         slider2.addEventListener('after.lory.slide', handleDotEvent);
         slider2.addEventListener('on.lory.resize', handleDotEvent);
 
-        const dot_navigation_slider = lory(slider2, {
+        const testimonialsSlider = lory(slider2, {
             infinite: 1,
             enableMouseEvents: true
         });
+
+        setTimeout(function run() {
+            testimonialsSlider.next();
+            setTimeout(run, 4000);
+        }, 4000);
 
     });
 })();
