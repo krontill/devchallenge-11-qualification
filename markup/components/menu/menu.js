@@ -7,7 +7,7 @@
             e.preventDefault();
             var w = window.pageYOffset,  // прокрутка
                 hash = this.href.replace(/[^#]*(.*)/, '$1'),  // id элемента, к которому нужно перейти
-            t = document.querySelector(hash).getBoundingClientRect().top,  // отступ от окна браузера до id
+                t = document.querySelector(hash).getBoundingClientRect().top,  // отступ от окна браузера до id
                 start = null;
             requestAnimationFrame(step);  // подробнее про функцию анимации [developer.mozilla.org]
             function step(time) {
@@ -23,4 +23,12 @@
             }
         }, false);
     }
+
+    const btnToggle = document.querySelector('[data-toggle=toggle]');
+    const menuToggle = document.querySelector('[data-toggle=menu]');
+    btnToggle.addEventListener('click', () => {
+        btnToggle.classList.toggle('menu-toggle--on');
+        menuToggle.classList.toggle('menu--show');
+    });
+
 })();

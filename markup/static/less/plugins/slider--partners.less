@@ -2,7 +2,7 @@
     margin: 84px 0 144px;
     position: relative;
     .slider__frame {
-        width: 1114px;
+        width: 180px;
         margin: 0 auto;
         overflow: hidden;
     }
@@ -49,5 +49,23 @@
             display: inline-flex;
             .bg(@testimonials-right);
         }
+    }
+}
+
+@media (min-width: 576px) {
+    .slider--partners .slider__frame {
+        width: 556px;
+    }
+}
+
+@media (min-width: 992px) {
+    .slider--partners .slider__frame {
+        width: 928px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .slider--partners .slider__frame {
+        width: 1114px;
     }
 }

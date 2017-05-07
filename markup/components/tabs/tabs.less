@@ -12,17 +12,17 @@
         flex: 1;
         max-width: 250px;
         text-align: center;
-        margin: 0 28px;
+        margin: 0 14px;
     }
     &__link {
         color: #adadad;
-        font-size: 21px;
+        font-size: 16px;
         text-transform: uppercase;
         font-family: "robotoblack", sans-serif;
         text-decoration: none;
         display: flex;
         justify-content: center;
-        letter-spacing: 2.52px;
+        letter-spacing: 1px;
         padding: 13px 0 32px;
         margin: 0 0 -2px 0;
         transition: color .3s;
@@ -46,6 +46,18 @@
         display: none;
         &--active {
             display: block;
+        }
+    }
+}
+
+@media (min-width: 576px) {
+    .tabs {
+        &__item {
+            margin: 0 28px;
+        }
+        &__link {
+            font-size: 21px;
+            letter-spacing: 2.52px;
         }
     }
 }

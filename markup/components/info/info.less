@@ -2,27 +2,29 @@
     display: flex;
     padding: 87px 0 0 0;
     position: relative;
+    flex-direction: column;
     &__bg-text {
         position: absolute;
-        font-size: 200px;
+        font-size: 60px;
         font-family: "robotoblack", sans-serif;
         color: #dddddd;
         text-transform: uppercase;
         z-index: -1;
-        top: 0;
-        right: 70px;
+        top: -20px;
+        right: 10px;
         line-height: 180px;
     }
     &__img {
-        width: 641px; //600 origin
-        height: 362px; //338
+        width: 100%;
+        max-width: 641px;
+        height: 250px;
         background: url('%=static=%assets/info/info.png') no-repeat;
         background-size: contain;
     }
     &__desc {
         font-family: Georgia, Times, "Times New Roman", serif;
         color: black;
-        padding: 0 0 0 57px;
+        padding: 0 0 0 40px;
     }
     &__title {
         font-size: 30px;
@@ -84,4 +86,41 @@
     }
 }
 
+@media (min-width: 768px) {
+    .info {
+        &__bg-text {
+            font-size: 132px;
+            top: 0;
+            right: 35px;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .info {
+        flex-direction: row;
+        &__desc {
+            padding: 0 0 0 40px;
+        }
+        &__bg-text {
+            font-size: 186px;
+            right: 35px;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .info {
+        &__desc {
+            padding: 0 0 0 57px;
+        }
+        &__bg-text {
+            font-size: 200px;
+            right: 70px;
+        }
+        &__img {
+            height: 362px;
+        }
+    }
+}
 

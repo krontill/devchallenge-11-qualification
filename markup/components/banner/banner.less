@@ -5,7 +5,7 @@
     .retina-img('%=static=%assets/banner/banner-2x.png', @attachment: fixed);
     height: 800px;
     line-height: 50px;
-    padding: 100px 0 43px 0;
+    padding: 200px 0 43px 0;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -25,11 +25,11 @@
         margin: -17px auto 17px;
     }
     &__title {
-        font-size: 58px;
         font-family: "robotoblack", sans-serif;
         text-transform: uppercase;
-        letter-spacing: 5.5px;
-        margin: 36px 50px 42px;
+        font-size: 36px;
+        letter-spacing: 3px;
+        margin: 36px 30px 42px;
     }
     &__highlight {
         color: #eab96a;
@@ -40,19 +40,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        &:after,
-        &:before {
-            content: '';
-            display: flex;
-        }
-        &:before {
-            .bg(@arrow-left);
-            margin: 1px 82px 0 0;
-        }
-        &:after {
-            .bg(@arrow-right);
-            margin: 1px 0 0 82px;
-        }
     }
     &__text {
         font-size: 21px;
@@ -100,6 +87,28 @@
     }
 }
 
-
-
-
+@media (min-width: 576px) {
+    .banner {
+        padding: 100px 0 43px 0;
+        &__title {
+            font-size: 58px;
+            letter-spacing: 5.5px;
+            margin: 36px 50px 42px;
+        }
+        &__subtitle {
+            &:after,
+            &:before {
+                content: '';
+                display: flex;
+            }
+            &:before {
+                .bg(@arrow-left);
+                margin: 1px 82px 0 0;
+            }
+            &:after {
+                .bg(@arrow-right);
+                margin: 1px 0 0 82px;
+            }
+        }
+    }
+}
