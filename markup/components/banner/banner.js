@@ -1,5 +1,5 @@
 (function () {
-    let arrow = document.querySelector('[data-scroll="true"]');
+    let arrow = document.querySelector('[data-scroll="arrow"]');
 
     function scrollArrow() {
         let height = arrow.getBoundingClientRect().top + arrow.offsetHeight;
