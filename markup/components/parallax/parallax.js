@@ -1,10 +1,11 @@
 (function () {
     window.onscroll = () => {
-        document.querySelectorAll('[data-scroll="true"]').forEach((item) => {
+        const mas = document.querySelectorAll('[data-scroll="true"]');
+        for (let i = 0; i < mas.length; i++) {
             let scrolled = window.pageYOffset || document.documentElement.scrollTop;
-            let yPos = -(scrolled / item.dataset.speed); // вычисляем коэффициент
+            let yPos = -(scrolled / mas[i].dataset.speed); // вычисляем коэффициент
             // Создаем эффект Parallax Scrolling
-            item.style.transform = 'translateY(' + yPos + 'px)';
-        });
+            mas[i].style.transform = 'translateY(' + yPos + 'px)';
+        }
     };
 })();
