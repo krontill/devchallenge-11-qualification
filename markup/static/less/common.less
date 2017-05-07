@@ -7,13 +7,17 @@ html, body {
 .page {
     background: url('%=static=%general/concrete_seamless.png') 0 -14px;
     .retina-img('%=static=%general/concrete_seamless-2x.png', repeat, 0 -14px, 200px);
+    &__wrapper {
+        min-height: 100%;
+        max-width: 1920px;
+        margin: 0 auto;
+    }
+    &__section {
+        max-width: 1180px;
+        margin: 0 auto;
+    }
 }
 
-.page__wrapper {
-    min-height: 100%;
-    max-width: 1920px;
-    margin: 0 auto;
-}
 
 * html .page__wrapper {
     height: 100%;
