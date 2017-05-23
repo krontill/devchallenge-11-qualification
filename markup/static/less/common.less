@@ -2,21 +2,47 @@
 
 html, body {
     height: 100%;
+    font-family: Georgia, Times, "Times New Roman", serif;
 }
 
 .page {
-    // Стили для body
+    background: url('%=static=%general/concrete_seamless.png') 0 -14px;
+    .retina-img('%=static=%general/concrete_seamless-2x.png', repeat, 0 -14px, 200px);
+    &__wrapper {
+        min-height: 100%;
+        max-width: 1920px;
+        margin: 0 auto;
+    }
+    &__section {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
 }
 
-.page__wrapper {
-    min-height: 100%;
-    margin-bottom: -50px;
-}
 
 * html .page__wrapper {
     height: 100%;
 }
 
-.page__buffer {
-    height: 50px;
+* {
+    box-sizing: border-box;
+}
+
+@media (min-width: 992px) {
+    .page {
+        &__section {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .page {
+        &__section {
+            max-width: 1180px;
+            margin: 0 auto;
+        }
+    }
 }

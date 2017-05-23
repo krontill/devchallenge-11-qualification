@@ -30,3 +30,23 @@
 }
 
 // You can add your own mixins here:
+
+.retina-img(@img-url, @repeat: no-repeat, @img-position: 0 0, @size: cover, @attachment: scroll) {
+    @media screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and ( min-resolution: 192dpi),
+    only screen and ( min-resolution: 2dppx),
+    only screen and (min-device-pixel-ratio: 2) {
+        background: url(@img-url) @repeat @img-position;
+        background-size: @size;
+        background-attachment: @attachment;
+    }
+}
+
+.fix-retina-height(@height) {
+    @media screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and ( min-resolution: 192dpi),
+    only screen and ( min-resolution: 2dppx),
+    only screen and (min-device-pixel-ratio: 2) {
+        height: @height;
+    }
+}

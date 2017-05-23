@@ -1,0 +1,25 @@
+.table {
+    display: table;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    &__row {
+        display: table-row;
+    }
+    &__cell {
+        display: table-cell;
+        border-bottom: 1px solid black;
+        border-right: 1px solid black;
+        font-size: 16px;
+        color: #485260;
+        padding: 12px 16px 8px 17px;
+        letter-spacing: -0.1px;
+    }
+    &__true {
+        display: flex;
+        .bg(@true);
+    }
+    &__false {
+        display: flex;
+        .bg(@false);
+    }
+}

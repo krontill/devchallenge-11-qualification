@@ -1,0 +1,181 @@
+.contact {
+    color: black;
+    padding: 90px 0 253px;
+    &__title {
+        font-size: 26px;
+        font-family: "robotoblack", sans-serif;
+        color: black;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        margin: 30px 0 24px auto;
+        border-bottom: 1px solid black;
+        max-width: 762px;
+        line-height: 82px;
+        z-index: 4;
+        position: relative;
+    }
+    &__subtitle {
+        font-size: 16px;
+        margin: 0 0 0 auto;
+        max-width: 762px;
+        z-index: 4;
+        position: relative;
+    }
+    &__form {
+        max-width: 762px;
+        margin: 56px 0 0 auto;
+        display: flex;
+        flex-direction: column;
+        z-index: 4;
+        position: relative;
+    }
+    &__input {
+        background: none;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid black;
+        width: 100%;
+        font-size: 12.5px;
+        font-family: "robotoblack", sans-serif;
+        color: black;
+        text-transform: uppercase;
+        line-height: 32px;
+        letter-spacing: 0.5px;
+        margin: 48px 0 0 0;
+
+        &::-webkit-input-placeholder {
+            color: black;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+        &::-moz-placeholder {
+            color: black;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+        /* Firefox 19+ */
+        &:-moz-placeholder {
+            color: black;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+        /* Firefox 18- */
+        &:-ms-input-placeholder {
+            color: black;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+
+        &:focus::-webkit-input-placeholder {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        &:focus::-moz-placeholder {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        &:focus:-moz-placeholder {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        &:focus:-ms-input-placeholder {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+    }
+    &__submit {
+        font-size: 17.5px;
+        font-family: "robotoblack", sans-serif;
+        background: none;
+        border: 2px solid black;
+        text-transform: uppercase;
+        letter-spacing: 0.6px;
+        padding: 16px 87px 18px;
+        margin: 48px 67px 2px auto;
+        align-self: flex-end;
+        transition: border .3s;
+        &:hover,
+        &:focus {
+            border: 2px solid #eab96a;
+        }
+    }
+    &__arrow {
+        width: 110px;
+        height: 2px;
+        background: black;
+        display: flex;
+        margin: -12px 0 0 95px;
+        position: absolute;
+        &:before,
+        &:after {
+            content: '';
+            display: inline-flex;
+            width: 19px;
+            height: 2px;
+            background: black;
+            position: absolute;
+            right: -3px;
+            top: -6px;
+        }
+        &:before {
+            transform: rotate(45deg);
+        }
+        &:after {
+            transform: rotate(-45deg);
+            top: 6px;
+        }
+    }
+    &__group {
+        max-width: 383px;
+        width: 100%;
+    }
+    &__espresso {
+        position: absolute;
+        right: 0;
+        z-index: 2;
+        margin: -1200px 0 0 0;
+    }
+    &__grain {
+        position: absolute;
+        z-index: 3;
+        margin: -1900px 0 0 0;
+        left: auto;
+        right: 0;
+    }
+    &__coffeebean {
+        position: absolute;
+        left: auto;
+        right: 0;
+        z-index: 2;
+        margin: -2100px 0 0 0;
+    }
+}
+
+@media (min-width: 576px) {
+    .contact {
+        &__title {
+            font-size: 50px;
+            letter-spacing: 5px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .contact {
+        &__form {
+            flex-direction: row;
+        }
+        &__submit {
+            margin: 0 67px 2px auto;
+        }
+        &__grain {
+            left: 0;
+            right: auto
+        }
+        &__coffeebean {
+            right: auto;
+            left: 290px;
+        }
+    }
+}

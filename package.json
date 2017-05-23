@@ -1,7 +1,7 @@
 {
-  "name": "awesome_project",
+  "name": "Coffee maker",
   "version": "1.0.0",
-  "description": "Your awesome project description",
+  "description": "Intensive program barista training",
   "main": "gulpfile.js",
   "directories": {},
   "dependencies": {

@@ -1,0 +1,29 @@
+<div class="tabs" data-id="tabs" >
+
+    <!-- Nav tabs -->
+    <ul class="tabs__nav">
+        <li class="tabs__item">
+            <a class="tabs__link tabs__link--active" data-toggle="tab" href="#basic">Basic</a>
+        </li>
+        <li class="tabs__item">
+            <a class="tabs__link" data-toggle="tab" href="#premium">Premium</a>
+        </li>
+        <li class="tabs__item">
+            <a class="tabs__link" data-toggle="tab" href="#platinum">Platinum</a>
+        </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tabs__content">
+        <div class="tabs__pane tabs__pane--active" data-target="tab" id="basic">
+            {{> info/info info.basic}}
+        </div>
+        <div class="tabs__pane" data-target="tab" id="premium">
+            {{> info/info info.premium}}
+        </div>
+        <div class="tabs__pane" data-target="tab" id="platinum">
+            {{> info/info info.platinum}}
+        </div>
+    </div>
+
+</div>

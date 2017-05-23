@@ -1,0 +1,112 @@
+.banner {
+    text-align: center;
+    color: #ffffff;
+    background: url('%=static=%assets/banner/banner.png') no-repeat fixed;
+    .retina-img('%=static=%assets/banner/banner-2x.png', @attachment: fixed);
+    height: 800px;
+    line-height: 50px;
+    padding: 200px 0 43px 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &:after {
+        content: '';
+        display: flex;
+        height: 141px;
+        width: 100%;
+        bottom: -26px;
+        position: absolute;
+        background: url('%=static=%assets/banner/mask.png') no-repeat;
+        .retina-img('%=static=%assets/banner/mask-2x.png');
+    }
+    &__stars {
+        .bg(@stars);
+        margin: -17px auto 17px;
+    }
+    &__title {
+        font-family: "robotoblack", sans-serif;
+        text-transform: uppercase;
+        font-size: 36px;
+        letter-spacing: 3px;
+        margin: 36px 30px 42px;
+    }
+    &__highlight {
+        color: #eab96a;
+    }
+    &__subtitle {
+        font-size: 17.5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__text {
+        font-size: 21px;
+    }
+    &__separator {
+        .bg(@banner-separator);
+        margin: 20px auto 0;
+    }
+    &__arrow {
+        border: 1px solid #ffffff;
+        border-radius: 100%;
+        box-shadow: 0 3px 10px 0 rgba(61, 61, 62, 0.15);
+        width: 61px;
+        height: 61px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        margin: 69px 0 0 0;
+        cursor: pointer;
+        transition: background .3s, border .3s;
+        z-index: 2;
+        &:before {
+            content: '';
+            .bg(@arrow);
+            margin: 4px 0 0 0;
+        }
+        &:hover,
+        &:focus {
+            background: rgba(61, 61, 62, 0.15);
+            border: 1px solid #eab96a;
+        }
+    }
+    &__granola {
+        width: 239px;
+        height: 246px;
+        position: absolute;
+        right: 96px;
+        margin: 305px 0 0;
+        z-index: 1;
+        background: url('%=static=%assets/banner/granola.png') no-repeat;
+        .retina-img('%=static=%assets/banner/granola-2x.png');
+        .fix-retina-height(247px);
+    }
+}
+
+@media (min-width: 576px) {
+    .banner {
+        padding: 100px 0 43px 0;
+        &__title {
+            font-size: 58px;
+            letter-spacing: 5.5px;
+            margin: 36px 50px 42px;
+        }
+        &__subtitle {
+            &:after,
+            &:before {
+                content: '';
+                display: flex;
+            }
+            &:before {
+                .bg(@arrow-left);
+                margin: 1px 82px 0 0;
+            }
+            &:after {
+                .bg(@arrow-right);
+                margin: 1px 0 0 82px;
+            }
+        }
+    }
+}
